@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{% block title %}Lionel Noussi{% endblock %}</title>
+  <link rel="stylesheet" href="/static/css/reset.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/partials/navbar.css">
+  <link rel="stylesheet" href="/static/css/partials/footer.css">
+  <link rel="icon" href="/static/img/favicon_black_round.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  {% block styles %}{% endblock %}
+</head>
+<body>
+  <header>
+    {% include 'partials/navbar.html' %}
+  </header>
+  
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    {% include 'partials/footer.html' %}
+  </footer>
+  
+  {% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,62 @@
+:root {
+  --blue: rgb(0, 36, 91);
+  --lightblue: rgb(1, 81, 202);
+
+  --navbarheight: 3rem;
+  --delay: 2s;
+}
+
+html, body { height: 100%; }
+body {
+  min-height: 100vh;            /* fill viewport */
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(217, 217, 217);
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  font-weight: 400;   /* normal text weight */
+}
+
+strong, b {
+  font-weight: 700;   /* makes bold elements actually bold */
+}
+
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+main {
+  flex: 1
+}
+
+.PageTitleSection {
+  padding: 1rem 2rem;
+  background-color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  text-align: justify; /* stretches text like in Word */
+}

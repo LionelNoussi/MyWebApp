@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="static/css/site_specific/index.css">
+{% endblock %}
+
+{% block title %}Home — Lionel Noussi{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-content">
+    <h1>Lionel Noussi</h1>
+    <h2>Electrical Engineering Master's Student at ETH</h2>
+  </div>
+  
+
+  <div class="featured">
+    <h2>Featured Posts:</h2>
+    <div class="projectsWindow">
+      <a href="/projects/first" class="project-card">
+        <img src="/static/img/chip_tapeout.png" alt="First post">
+        <div class="caption">Chip Design + Tapeout</div>
+      </a>
+      <a href="/projects/second" class="project-card">
+        <img src="/static/img/ibm_logo.jpg" alt="Second post">
+        <div class="caption">IBM Research Internship</div>
+      </a>
+      <a href="/projects/third" class="project-card">
+        <img src="/static/img/chip.jpeg" alt="Third post">
+        <div class="caption">Best Bachelor Thesis Award</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- SVG background -->
+  <svg class="hero-bg" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+    <defs>
+      <filter id="glow">
+        <feGaussianBlur stdDeviation="2" result="blur"/>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
+  
+    <!-- your paths -->
+    <path d="M50 100 H400 V200 H700 V300 H950 V400" class="pulse"/>
+    <path d="M900 50 V200 H750 V400 H600 V500 H500" class="pulse"/>
+    <path d="M0 800 H200 V850 H400 V900 H700 V950 H900" class="pulse"/>
+    <path d="M200 50 V200 H350 V300 H450 V400 H650" class="pulse"/>
+    <path d="M700 100 V250 H800 V300 H950 V350 H980" class="pulse"/>
+    <path d="M50 700 H300 V750 H500 V800 H750 V850 H900" class="pulse"/>
+    <path d="M800 900 V750 H700 V700 H600 V650 H400" class="pulse"/>
+    <path d="M0 400 H150 V450 H300 V500 H600 V650 H850" class="pulse"/>
+    <path d="M100 100 V200 H200 V250 H350 V300 H600" class="pulse"/>
+    <path d="M900 200 V300 H800 V350 H750 V400 H500" class="pulse"/>
+    <path d="M50 300 H200 V350 H400 V400 H700" class="pulse"/>
+    <path d="M150 700 V800 H300 V850 H450 V900 H700" class="pulse"/>
+    <path d="M0 200 H150 V250 H350 V300 H600 V350 H850" class="pulse"/>
+    <path d="M100 600 V700 H300 V750 H500 V800 H750" class="pulse"/>
+    <path d="M800 50 H850 V100 H900 V150 H950 V200 H980" class="pulse"/>
+  </svg>
+</section>
+
+<section class="content">
+  <div class="textbox">
+    <p>
+      Master's student in Electrical Engineering at ETH Zurich.
+    </p> <p>
+      <b>Focus:</b> Digital Circuit Design and Electronic Design Automation (EDA)
+    </p> <p>
+      <b>Highlight Summary:</b>
+    </p> <p>
+      Finished Bachelor's degree in Electrical Engineering with honors and was awarded the
+      "Best Bachelor's Thesis Award". The project focused on simulating and benchmarking
+      In-Memory-Computing circuits to solve NP-Hard optimization problems using Hopfield Neural Networks.
+    </p> <p>
+      My 6-month internship at IBM Research Zurich focused on creating a software stack to deploy
+      state-of-the-art neural networks on the group's custom ASIC AI accelerators. This involved
+      pipelining computational graphs, solving various optimization problems, calibrating chip
+      hyper-parameters and creating a user-friendly programming experience. The software stack
+      is still continued to be used internally and already led to new publications.
+    </p> <p>
+      During my course-work, I also meaningfully extended the RTL of a complete System-on-Chip (SoC)
+      and went through all the steps until tapeout, including synthesis, floorplanning, place, route,
+      DRC and LVS checks. My design was one of the top 5 in the class and is therefore being taped-out.
+      This gives me real digital-design and tapeout experience.
+    </p>
+  </div>
+</section>
+
+
+{% endblock %}
+
+{% block scripts %}
+<script src="static/js/index.js"></script>
+{% endblock %}
